@@ -1,6 +1,4 @@
 package com.mesut.ECommerceSiteWithAngularAndSpringBoot.entity;
-
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -8,8 +6,8 @@ import javax.persistence.*;
 import java.util.Set;
 
 @Entity
-@Table(name = "product_category")
-//@Data will be bug in here because of one to many relation instead we are using below shown annotations
+@Table(name="product_category")
+// @Data -- known bug
 @Getter
 @Setter
 public class ProductCategory {
@@ -24,4 +22,5 @@ public class ProductCategory {
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "category")
     private Set<Product> products;
+
 }
