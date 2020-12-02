@@ -24,7 +24,6 @@ public class Country {
     private String name;
 
     @OneToMany(mappedBy = "country")
-//    @JsonIgnore //ignores below shown column
     private List<State> states;
 
 }
