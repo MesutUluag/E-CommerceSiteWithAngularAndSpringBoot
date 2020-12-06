@@ -15,4 +15,5 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
 
     Page<Product> findByNameContaining(@RequestParam("name") String name, Pageable pageable);
     //    http://localhost:8080/api/products/search/findByNameContaining?name=python
+    // Query was SELECT * FROM Product p WHERE p.name LIKE CONCAT('%', :name, '%')
 }
