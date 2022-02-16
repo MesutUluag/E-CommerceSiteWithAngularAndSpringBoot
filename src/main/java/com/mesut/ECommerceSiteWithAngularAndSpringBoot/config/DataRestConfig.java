@@ -1,9 +1,6 @@
 package com.mesut.ECommerceSiteWithAngularAndSpringBoot.config;
 
-import com.mesut.ECommerceSiteWithAngularAndSpringBoot.entity.Country;
-import com.mesut.ECommerceSiteWithAngularAndSpringBoot.entity.Product;
-import com.mesut.ECommerceSiteWithAngularAndSpringBoot.entity.ProductCategory;
-import com.mesut.ECommerceSiteWithAngularAndSpringBoot.entity.State;
+import com.mesut.ECommerceSiteWithAngularAndSpringBoot.entity.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
@@ -36,6 +33,7 @@ public class DataRestConfig implements RepositoryRestConfigurer {
         disableHttpMethods(ProductCategory.class, config, theUnsupportedActions);
         disableHttpMethods(Country.class, config, theUnsupportedActions);
         disableHttpMethods(State.class, config, theUnsupportedActions);
+        disableHttpMethods(Order.class, config, theUnsupportedActions);
 
         exposeIds(config);
 
