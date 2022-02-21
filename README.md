@@ -10,3 +10,4 @@ Backend of e-commerce project
 3. Backend accepts both JSON and XML structures.
 4. /orders endpoint is secured using Okta authentication server with JWT
 5. Https Rest API's
+6. Sends credit card payment using stripe infrastructure
