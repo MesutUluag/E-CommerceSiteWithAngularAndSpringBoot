@@ -40,12 +40,6 @@ class ECommerceSiteWithAngularAndSpringBootApplicationTests {
 
         // place the order
         PurchaseResponse purchaseResponse = checkoutService.placeOrder(purchase);
-        boolean result;
-        if (purchaseResponse.getOrderTrackingNumber() instanceof String) {
-            result = true;
-        } else {
-            result = false;
-        }
-        assertEquals(true, result);
+        assertEquals(true, purchaseResponse.getOrderTrackingNumber() instanceof String ? true : false);
     }
 }
