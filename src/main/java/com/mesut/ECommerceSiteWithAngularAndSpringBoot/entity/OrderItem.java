@@ -1,15 +1,14 @@
 package com.mesut.ECommerceSiteWithAngularAndSpringBoot.entity;
 
-import lombok.Getter;
-import lombok.Setter;
-
+import lombok.Builder;
+import lombok.Data;
 import javax.persistence.*;
 import java.math.BigDecimal;
 
 @Entity
 @Table(name="order_item")
-@Getter
-@Setter
+@Data
+@Builder
 public class OrderItem {
 
     @Id

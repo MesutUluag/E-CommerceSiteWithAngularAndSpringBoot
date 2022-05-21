@@ -1,7 +1,6 @@
 package com.mesut.ECommerceSiteWithAngularAndSpringBoot.entity;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.HashSet;
@@ -11,6 +10,8 @@ import java.util.Set;
 @Table(name="customer")
 @Getter
 @Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Customer {
 
     @Id
