@@ -1,5 +1,7 @@
 package com.mesut.ECommerceSiteWithAngularAndSpringBoot.entity;
 
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotNull;
 import lombok.*;
 
 import javax.persistence.*;
@@ -20,11 +22,14 @@ public class Customer {
     private Long id;
 
     @Column(name="first_name")
+    @NotNull
     private String firstName;
 
+    @NotNull
     @Column(name="last_name")
     private String lastName;
 
+    @Email
     @Column(name="email")
     private String email;
 

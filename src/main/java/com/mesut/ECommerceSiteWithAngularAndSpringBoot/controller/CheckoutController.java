@@ -11,6 +11,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
+
 @RestController
 @RequestMapping("/api/checkout")
 public class CheckoutController {
@@ -23,7 +25,7 @@ public class CheckoutController {
 
 
     @PostMapping("/purchase")
-    public PurchaseResponse placeOrder(@RequestBody Purchase purchase){
+    public PurchaseResponse placeOrder(@RequestBody @Valid Purchase purchase){
         return checkoutService.placeOrder(purchase);
     }
 
